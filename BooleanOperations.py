@@ -1,59 +1,5 @@
 # Codigo donde se pone a prueba las operaciones booleanas para practicar
 
-# Variables
-
-'''num1 = int(input('Ingresa un numero: '))
-num2 = int(input('Ingresa un numero: '))
-num3 = int(input('Ingresa un numero: '))
-
-if num1 < num2 or num1 > num3:
-    print(True)
-elif num1 == num2 and num1 != num3:
-    print('Los tres numero ingresados son iguales')
-else:
-    print(False)
-'''
-
-# Verificador de mayor de edad 
-
-'''while True: 
-
-    age = int(input('Ingresa tu edad: '))
-
-    if age >= 18:
-        print('Tu eres mayor de edad')
-        print(True)
-    else:
-        print('Te falta')
-        print(False)'''
-
-'''# Validador de entrada 
-
-# La cadena de texto ingresa tiene que cumplir con 3 requisitos:
-# 1) Debe ser alfanumerica 2) Debe tener 10 digitos 3) Debe tener 2 caracteres especiales
-caracteres = ['$','#','&','/','|','!','*','%']
-entrada = input('Entra una cadena de texto: ')
-
-# Contar cuántos caracteres especiales están en la cadena
-contador = sum(1 for i in entrada if i in caracteres)
-
-# Verificar si hay al menos una letra
-tiene_letra = any(i.isalpha() for i in entrada)
-
-
-# Verificar si hay al menos un número
-tiene_numero = any(i.isdigit() for i in entrada)
-
-
-if tiene_numero and tiene_letra and 8 <= len(entrada) <= 10 and contador >= 2:
-    print(True)
-    print('Tu entrada cumple con los parametros')
-else:
-    print(False)
-    print('ERROR. Cumple los parametros!')
-
-'''
-
 # Juego de afirmaciones 
 
 # Juego de afirmaciones 
@@ -120,9 +66,4 @@ elif count <= 10 and count > 5:
 elif count <= 15 and count > 10:
     print('Posees excelente conocimiento general')
 
-
-
-
-
-# Agregar un contador de respuestas acertadas
 
