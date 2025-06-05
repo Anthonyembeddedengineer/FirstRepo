@@ -24,6 +24,11 @@ afirmaciones = {
     'Albert Einstein desarrolló la teoría de la evolución': False,
     'La civilización egipcia se desarrolló a orillas del río Nilo': True,
     'La Segunda Guerra Mundial comenzó en 1945': False
+    'La Gran Muralla China fue construida para protegerse de invasiones mongolas': True,
+    'La teoría heliocéntrica fue propuesta originalmente por Galileo Galilei': False,
+    'La independencia de México se celebra el 16 de septiembre': True,
+    'La Revolución Industrial comenzó en Francia a mediados del siglo XVIII': False,
+    'Martin Luther King Jr. fue un líder importante en el movimiento por los derechos civiles en Estados Unidos': True
 }
 # Recorremos las afirmaciones
 
