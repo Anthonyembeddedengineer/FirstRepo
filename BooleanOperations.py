@@ -1,6 +1,7 @@
-# Codigo donde se pone a prueba las operaciones booleanas para practicar
 
-# Juego de afirmaciones 
+import random
+
+# Codigo donde se pone a prueba las operaciones booleanas para practicar
 
 # Juego de afirmaciones 
 
@@ -27,8 +28,11 @@ afirmaciones = {
 }
 # Recorremos las afirmaciones
 
-for pregunta, respuesta_correcta in afirmaciones.items():
-    print('\nVerdadero o falso?: ', pregunta)
+afirmaciones_random = list(afirmaciones.items()) 
+random.shuffle(afirmaciones_random) # Sorteamos las preguntas aleatoriamente con shuffle
+
+for preguntas, respuesta_correcta in afirmaciones_random:
+    print('\nVerdadero o falso?: ', preguntas)
 
     # Le preguntamos al usuario por su respuesta
     respuesta_usuario = input('\nIngresa "verdadero" o "falso": ').lower().strip()
