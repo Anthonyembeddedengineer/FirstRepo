@@ -1,3 +1,5 @@
+import time
+
 # Codigo donde se pone a prueba las operaciones booleanas para practicar
 
 # Juego de afirmaciones 
@@ -5,6 +7,9 @@
 # Juego de afirmaciones 
 
 # Datos de repuestas acertadas
+
+## rama2: Agregar una funcionalidad dentro del codigo para evaluar la rapidez del usuario en contestar.
+
 
 count = 0
 
@@ -26,18 +31,22 @@ afirmaciones = {
     'La Segunda Guerra Mundial comenzó en 1945': False
 }
 # Recorremos las afirmaciones
-
+startime_total = time.time() # Trackeo de tiempo de inicio total
 for pregunta, respuesta_correcta in afirmaciones.items():
     print('\nVerdadero o falso?: ', pregunta)
 
     # Le preguntamos al usuario por su respuesta
-    respuesta_usuario = input('\nIngresa "verdadero" o "falso": ').lower().strip()
+    startime = time.time() # trackeo de tiempo de inicio
+    respuesta_usuario = input('\nIngresa "v" = verdadero o "f" = falso: ').lower().strip()
+    endtime = time.time() # trackeo de tiempo de finalización
+    elapsed_time = round(endtime-startime)
+   
 
     # Transformamos las respuestas a booleanos
-    if respuesta_usuario == 'verdadero':
+    if respuesta_usuario == 'v':
         respuesta_usuario_bool = True
         
-    elif respuesta_usuario == 'falso': 
+    elif respuesta_usuario == 'f': 
         respuesta_usuario_bool = False
         
     else:
@@ -48,22 +57,32 @@ for pregunta, respuesta_correcta in afirmaciones.items():
 
     if respuesta_usuario_bool == respuesta_correcta:
         print('Correcta!')
+        print(f'Tiempo de ejecucion: {elapsed_time}s')
         count += 1
     else:
-        respuesta_texto = 'verdadero' if respuesta_correcta else 'false'
-        print(f'La respuesta correcta es {respuesta_texto}!') 
+        respuesta_texto = 'verdadero' if respuesta_correcta else 'falso'
+        print(f'La respuesta correcta es {respuesta_texto}!')
+        print(f'Tiempo de ejecucion: {elapsed_time}s')   
 
 # Contador de respuestas acertadas
 
-print(f'\nRespuesta acertadas: {count}')
+print(f'\nRespuestas acertadas: {count}')
 
 # Medidor de conocimiento general
 
 if count <= 5 and count >= 0:
     print('Mejora tu conocimiento general')
 elif count <= 10 and count > 5:
-    print('Posees buen conocimiento general. Pero puede mejorar!')
+    print('Posees buen conocimiento general. Pero puedes mejorar!')
 elif count <= 15 and count > 10:
     print('Posees excelente conocimiento general')
+endtime_total = time.time() # Trackeo de tiempo de ejecución final
+total_time = round(endtime_total - startime_total)
+print(f'\nTiempo de ejecucion total: {total_time}s')
+
+
+
+
+
 
 
