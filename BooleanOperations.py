@@ -1,8 +1,4 @@
-import time
-
 # Codigo donde se pone a prueba las operaciones booleanas para practicar
-
-# Juego de afirmaciones 
 
 # Juego de afirmaciones 
 
@@ -36,7 +32,7 @@ afirmaciones = {
     'Martin Luther King Jr. fue un líder importante en el movimiento por los derechos civiles en Estados Unidos': True
 }
 # Recorremos las afirmaciones
-startime_total = time.time() # Trackeo de tiempo de inicio total
+
 for pregunta, respuesta_correcta in afirmaciones.items():
     print('\nVerdadero o falso?: ', pregunta)
 
