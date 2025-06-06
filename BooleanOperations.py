@@ -24,7 +24,7 @@ afirmaciones = {
     'La peste negra mató a aproximadamente un tercio de la población europea en el siglo XIV': True,
     'Albert Einstein desarrolló la teoría de la evolución': False,
     'La civilización egipcia se desarrolló a orillas del río Nilo': True,
-    'La Segunda Guerra Mundial comenzó en 1945': False
+    'La Segunda Guerra Mundial comenzó en 1945': False,
     'La Gran Muralla China fue construida para protegerse de invasiones mongolas': True,
     'La teoría heliocéntrica fue propuesta originalmente por Galileo Galilei': False,
     'La independencia de México se celebra el 16 de septiembre': True,
@@ -32,7 +32,8 @@ afirmaciones = {
     'Martin Luther King Jr. fue un líder importante en el movimiento por los derechos civiles en Estados Unidos': True
 }
 # Recorremos las afirmaciones
-
+afirmaciones_random = list(afirmaciones.items()) 
+random.shuffle(afirmaciones_random) # Sorteamos las preguntas aleatoriamente con shuffle
 for pregunta, respuesta_correcta in afirmaciones.items():
     print('\nVerdadero o falso?: ', pregunta)
 
