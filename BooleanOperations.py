@@ -1,3 +1,6 @@
+import time
+import random
+
 # Codigo donde se pone a prueba las operaciones booleanas para practicar
 
 # Juego de afirmaciones 
@@ -34,10 +37,13 @@ afirmaciones = {
 # Recorremos las afirmaciones
 afirmaciones_random = list(afirmaciones.items()) 
 random.shuffle(afirmaciones_random) # Sorteamos las preguntas aleatoriamente con shuffle
+
+startime_total = time.time() # trackeo de tiempo inicio total
 for pregunta, respuesta_correcta in afirmaciones.items():
     print('\nVerdadero o falso?: ', pregunta)
 
     # Le preguntamos al usuario por su respuesta
+    
     startime = time.time() # trackeo de tiempo de inicio
     respuesta_usuario = input('\nIngresa "v" = verdadero o "f" = falso: ').lower().strip()
     endtime = time.time() # trackeo de tiempo de finalización
@@ -87,6 +93,3 @@ print(f'\nTiempo de ejecucion total: {total_time}s')
 
 
 
-
-print('RAMA 1')
-print('Agregar funcionalidades')
